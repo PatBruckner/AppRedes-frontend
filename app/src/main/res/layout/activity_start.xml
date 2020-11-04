@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,11 +7,12 @@
     tools:context=".StartActivity">
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="156dp"
-        tools:ignore="MissingConstraints">
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/send_text_id"
@@ -25,8 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="sendMessage"
-        android:text="Start"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="259dp"
-        tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="Empezar"
+        android:layout_below="@id/field"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"/>
+</RelativeLayout>

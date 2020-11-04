@@ -1,47 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".data.MainActivity">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="0dp" />
+    tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/received_value_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="186dp"
-        tools:layout_editor_absoluteY="10dp"
-        tools:ignore="MissingConstraints" />
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/sendLayout"
+        android:layout_alignParentTop="true" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
+        android:id="@+id/sendLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="675dp"
-        tools:ignore="MissingConstraints">
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="5dp">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/send_message"
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/messageField"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Type" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName" />
 
-    <Button
-        android:id="@+id/refresh_button"
-        android:layout_width="58dp"
-        android:layout_height="34dp"
-        android:text="R"
-        tools:layout_editor_absoluteX="345dp"
-        tools:layout_editor_absoluteY="15dp"
-        tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="send"
+            android:text="enviar" />
+    </LinearLayout>
+</RelativeLayout>

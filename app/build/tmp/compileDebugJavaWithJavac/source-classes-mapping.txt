@@ -1,0 +1,13 @@
+com/asiesinc/appredes/BuildConfig.java
+ com.asiesinc.appredes.BuildConfig
+com/asiesinc/appredes/Message.java
+ com.asiesinc.appredes.Message
+com/asiesinc/appredes/MainActivity.java
+ com.asiesinc.appredes.MainActivity
+ com.asiesinc.appredes.MainActivity$1
+ com.asiesinc.appredes.MainActivity$2
+ com.asiesinc.appredes.MainActivity$3
+ com.asiesinc.appredes.MainActivity$4
+com/asiesinc/appredes/StartActivity.java
+ com.asiesinc.appredes.StartActivity
+ com.asiesinc.appredes.StartActivity$1

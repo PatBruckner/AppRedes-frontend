@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     private String name;
     private TextView messagesView;
     private EditText messageField;
-    List<Message> messages = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         try {
                             JSONArray jsonarray = new JSONArray(response);
+                            List<Message> messages = new ArrayList<>();
                             for (int i = 0; i < jsonarray.length(); i++) {
                                 JSONObject jsonobject = jsonarray.getJSONObject(i);
                                 String id_message = jsonobject.getString("id_message");

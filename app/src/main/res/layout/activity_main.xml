@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="refresh"
     tools:context=".MainActivity">
 
     <TextView
@@ -37,5 +38,13 @@
             android:layout_weight="1"
             android:onClick="send"
             android:text="enviar" />
+
+        <Button
+            android:id="@+id/refreshButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="refresh"
+            android:textSize="12sp" />
     </LinearLayout>
 </RelativeLayout>

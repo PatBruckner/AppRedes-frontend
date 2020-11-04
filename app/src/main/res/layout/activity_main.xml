@@ -32,4 +32,12 @@
             android:layout_height="wrap_content"
             android:hint="Type" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/refresh_button"
+        android:layout_width="58dp"
+        android:layout_height="34dp"
+        android:text="R"
+        tools:layout_editor_absoluteX="345dp"
+        tools:layout_editor_absoluteY="15dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
